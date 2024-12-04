@@ -14,12 +14,12 @@ export function ShoeDetail({ shoe, onClickAdd, onClickCart}) {
         {/* Shoe image */}
       <div className=" flex-1 lg:-mt-32 lg:ml-28">
         <div className="
-          flex-center h-[80%] flex-col bg-gradient-to-br from-[#F637CF] from-5% via-[#E3D876] via-40% to-[#4DD4C6]">
+          flex-center h-[70%] flex-col bg-gradient-to-br from-[#F637CF] from-5% via-[#E3D876] via-40% to-[#4DD4C6]">
           <div className="max-w-[700px]">
             <img className="animate-combinedWF" src={shoe.src} />
           </div>
         </div>
-        <div className="w-full mx-auto px-4">
+        <div className="w-full h-[140px] mx-auto">
           <ItemsCarousel items={SHOE_LIST} onClickCart={ onClickCart } />
         </div>
       </div>

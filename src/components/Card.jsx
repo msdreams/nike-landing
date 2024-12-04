@@ -13,7 +13,7 @@ export function Card({ item, onClick }) {
       </div>
       
       <img
-        className="absolute left-[40%] top-5 h-40 w-56"
+        className="absolute left-[40%] top-5 w-48"
         src={item.src}
       />
     </div>
