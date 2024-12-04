@@ -7,9 +7,10 @@ export function ItemsSection({ items, onClickCart }) {
     <div className="mt-32">
       <div className="flex-center ">
         <div className="
-        dark:text-white 
-        bg-[url('./assets/lines.png')] dark:bg-none
-        bg-center text-4xl font-extrabold">
+          dark:text-white 
+          bg-[url('./assets/lines.png')] dark:bg-none
+          bg-center text-4xl font-extrabold"
+        >
           NEW ARRIVALS
         </div>
       </div>

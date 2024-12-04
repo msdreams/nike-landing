@@ -31,7 +31,7 @@ export const SHOE_LIST = [
     className: "bg-[#DAFFA2]",
     title: "Nike Air Max 2090",
     description:
-      "The Nike Air Max 2090 is shoe that's both stylish and comfortable. It's the perfect shoe for any fashion-forward individual.",
+      "The Nike Air Max 2090 is shoe that's both stylish and comfortable. For any fashion-forward individual.",
     price: 150,
   },
   {

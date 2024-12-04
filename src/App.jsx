@@ -11,11 +11,10 @@ export function App() {
   const [isOpen, setIsOpen] = useState(false);
   const [currentShoe, setCurrentShoe] = useState(SHOE_LIST[0]);
   const [cartItems, setCartItems] = useState([]);
-  console.log(cartItems);
 
   useEffect(() => {
     const isDarkMode = localStorage.getItem("isDarkMode")
-    if (!isDarkMode) {
+    if (isDarkMode) {
       window.document.documentElement.classList.add("dark")
     }
   }, [])
@@ -50,7 +49,7 @@ export function App() {
 
   return <div className="animate-fadeIn p-10 xl:px-24 dark:bg-night">
     <Nav onclickBag={() => setIsOpen(true) } />
-    <ShoeDetail onClickAdd={addToCart} shoe={currentShoe} />
+    <ShoeDetail onClickAdd={addToCart} shoe={currentShoe} onClickCart={ setCurrentShoe }/>
     <ItemsSection items={SHOE_LIST} onClickCart={ setCurrentShoe } />
     <SideBar
       isOpen={isOpen}

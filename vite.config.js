@@ -8,5 +8,8 @@ export default defineConfig({
   server: {
     port: 3001,
   },
-  base: '/nike-landing/', 
+  base: '/nike-landing/',
+  optimizeDeps: {
+    include: ['swiper/react', 'swiper'],
+  },
 })

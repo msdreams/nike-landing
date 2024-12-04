@@ -1,11 +1,12 @@
 import { useState } from "react";
-import { QTY, SIZES } from "../Constant";
+import { QTY, SHOE_LIST, SIZES } from "../Constant";
 import { Select } from "./Select";
+import { ItemsCarousel } from "./ItemsCarousel";
 /* eslint-disable react/prop-types */
 
 
 
-export function ShoeDetail({ shoe, onClickAdd }) {
+export function ShoeDetail({ shoe, onClickAdd, onClickCart}) {
   const [form, setForm] = useState({qty: null, size: null})
 
   return (
@@ -13,13 +14,18 @@ export function ShoeDetail({ shoe, onClickAdd }) {
         {/* Shoe image */}
       <div className=" flex-1 lg:-mt-32 lg:ml-28">
         <div className="
-        flex-center h-full bg-gradient-to-br from-[#F637CF] from-5% via-[#E3D876] via-40% to-[#4DD4C6]">
-        <img className="animate-combinedWF" src={shoe.src}/>
+          flex-center h-[80%] flex-col bg-gradient-to-br from-[#F637CF] from-5% via-[#E3D876] via-40% to-[#4DD4C6]">
+          <div className="max-w-[700px]">
+            <img className="animate-combinedWF" src={shoe.src} />
+          </div>
+        </div>
+        <div className="w-full mx-auto px-4">
+          <ItemsCarousel items={SHOE_LIST} onClickCart={ onClickCart } />
         </div>
       </div>
 
         {/* Shoe text */}
-      <div className="flex-1 space-y-6 dark:text-gray-200">
+      <div className="lg:min-h-[640px] flex-1 space-y-6 dark:text-gray-200">
         <div className="text-5xl font-black md:text-9xl">
           {shoe.title}
         </div>
@@ -28,7 +34,7 @@ export function ShoeDetail({ shoe, onClickAdd }) {
         </div>
         <div className="flex flex-row space-x-6">
           <div className="text-3xl font-extrabold md:text-6xl">
-          {shoe.price}
+          {shoe.price} $
           </div>
         <Select
           value={form.qty}
